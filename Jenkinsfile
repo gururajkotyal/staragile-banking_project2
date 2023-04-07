@@ -30,7 +30,7 @@ pipeline {
               steps {
                   
                   sh'sudo docker system prune -af '
-                  sh 'sudo docker build -t gururajdockerusername/banking-project:${BUILD_NUMBER}.0 .'
+                  sh 'sudo docker build -t gururajdockerusername/banking-project:1.0 .'
               
                 }
             }
@@ -39,7 +39,7 @@ pipeline {
               steps {
                    withCredentials([string(credentialsId: 'dockerpasswd', variable: 'dockerpasswd')]) {
                   sh 'sudo docker login -u gururajdockerusername -p ${dockerpasswd} '
-                  sh 'sudo docker push gururajdockerusername/banking-project:${BUILD_NUMBER}.0 '
+                  sh 'sudo docker push gururajdockerusername/banking-project:1.0 '
                   }
                 }
         }    
