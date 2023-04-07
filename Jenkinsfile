@@ -9,7 +9,7 @@ pipeline {
         stage('Git checkout') {
             steps {
               
-                   git 'https://github.com/SaiRevanth-J/project-02-bank-finacial.git'
+                   git 'https://github.com/gururajkotyal/staragile-banking_project2.git'
             
                 }
             }
